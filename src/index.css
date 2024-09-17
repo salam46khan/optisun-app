@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  /* transition: 0.3s; */
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.myBtn {
+  padding: 10px 30px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 50px;
+  background: #222;
+  box-shadow: 3px 3px 5px #000000bb,
+  inset 3px 3px 3px #4d4d4da6,
+  -1px -1px 3px #4d4d4da6,
+  inset -1px -1px 3px #000000bb;
+  color: #c9c9c9a1;
+  transition: 0.3s;
+}
+.myBtn> .icon{
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow:inset 1px 1px 4px #000000bb,
+  1px 1px 3px #4d4d4da6;
+  background: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myBtn:hover{
+  color: #e51679;
+}
+.myBtn>.icon>.i{
+  transition: 0.2s;
+}
+.myBtn:hover>.icon>.i{
+  transform: scale(1.4)
+}

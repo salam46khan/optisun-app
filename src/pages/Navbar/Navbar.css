@@ -1,0 +1,15 @@
+.myNav{
+    /* background: #000; */
+}
+.pcNav li a{
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #127D83;
+}
+.MobNav li a{
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #127D83;
+}
