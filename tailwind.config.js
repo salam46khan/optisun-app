@@ -10,6 +10,10 @@ export default {
         myTitle: ["Zen Dots", "sans-serif"],
         normalFont: ["Josefin Sans", "sans-serif"],
         mySubTitle: ["Montserrat", "sans-serif"]
+      },
+      colors: {
+        pinkColor: "#e51679",
+        tealColor: "#127D83"
       }
     },
   },

@@ -1,15 +1,32 @@
 .myNav{
     /* background: #000; */
+    
 }
 .pcNav li a{
     padding: 5px 15px;
     font-weight: 600;
     font-size: 20px;
     color: #127D83;
+    cursor: pointer;
+}
+.pcNav li a:hover{
+    color: #e51679;
+}
+.pcNav li a.active{
+    color: #e51679;
+}
+.MobNav li{
+    padding: 5px 10px;
 }
 .MobNav li a{
     padding: 5px 15px;
     font-weight: 600;
     font-size: 20px;
     color: #127D83;
+    border-bottom: 1px solid #127d8348;
+    width: 100%;
+    display: inline-block;
+}
+.MobNav li a:hover{
+    color: #e51679;
 }
