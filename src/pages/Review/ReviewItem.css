@@ -1,0 +1,22 @@
+.reviewItem {
+}
+
+.reviewImg {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.reviewImg img {
+    width: 100%;
+}
+
+.reviewContent {}
+
+.reviewContent .reviewInner {
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px #000000bb,
+        inset 3px 3px 3px #4d4d4da6,
+        -1px -1px 3px #4d4d4da6,
+        inset -1px -1px 3px #000000bb;
+    backdrop-filter: blur(10px);
+}

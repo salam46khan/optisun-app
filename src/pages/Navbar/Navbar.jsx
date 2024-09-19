@@ -121,7 +121,7 @@ const Navbar = () => {
                                 to={"about"}
                                 spy={true}
                                 smooth={true}
-                                offset={50}
+                                offset={-100}
                                 duration={500}
                             >
                                 About
@@ -129,10 +129,11 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
+                                activeClass="active"
                                 to={"review"}
                                 spy={true}
                                 smooth={true}
-                                offset={50}
+                                offset={-100}
                                 duration={500}
                             >
                                 Review

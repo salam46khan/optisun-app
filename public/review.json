@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Sarah Johnson",
+        "prof": "Fashion Blogger",
+        "image": "https://i.ibb.co.com/WPL990J/pic-5.jpg",
+        "comment": "Absolutely love these sunglasses! Stylish and super comfortable. I get compliments every time I wear them!"
+    },
+    {
+        "id": 2,
+        "name": "Michael Brown",
+        "prof": "Photographer",
+        "image": "https://i.ibb.co.com/NWKWdND/pic-4.jpg",
+        "comment": "The lenses are incredibly clear, and the UV protection is a must-have for outdoor shoots. I've recommended these to all my colleagues."
+    },
+    {
+        "id": 3,
+        "name": "Emily Rodriguez",
+        "prof": "Travel Enthusiast",
+        "image": "https://i.ibb.co.com/X2ZG85G/pic-3.jpg",
+        "comment": "These are my go-to sunglasses for every trip. They look great and protect my eyes even in the brightest sunlight!"
+    },
+    {
+        "id": 4,
+        "name": "David Lee",
+        "prof": "Entrepreneur",
+        "image": "https://i.ibb.co.com/gmj8t30/pic-1.jpg",
+        "comment": "I've tried many brands, but these are by far the best in terms of quality and comfort. They look expensive but are very affordable!"
+    },
+    {
+        "id": 5,
+        "name": "Anna Williams",
+        "prof": "Fitness Trainer",
+        "image": "https://i.ibb.co.com/ZLC6jfz/pic-2.jpg",
+        "comment": "Perfect for my outdoor workouts! Lightweight, durable, and they stay on securely even when I'm on the move."
+    }
+]

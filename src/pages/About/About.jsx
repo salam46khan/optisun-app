@@ -3,7 +3,7 @@ import aboutPic from '../../assets/img/about-removebg-preview.png'
 import Choose from '../Choose/Choose';
 const About = () => {
     return (
-        <div className=" bg-[#222222] pt-10" id="about">
+        <div className=" bg-[#222222] md:pt-10 pt-5" id="about">
             <div className="container flex flex-col md:flex-row-reverse justify-center items-center h-full px-2">
 
                 <div className="w-full md:w-1/2 py-4">
