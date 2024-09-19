@@ -32,7 +32,7 @@ const Hero = () => {
                     <h1 className='font-myTitle text-5xl md:text-7xl font-extrabold ab'>
                         Find Your Shade of Cool
                     </h1>
-                    <p className='font-normalFont md:text-2xl text-xl font-thin w-full max-w-2xl py-4 ab'>
+                    <p className='font-normalFont md:text-2xl text-xl font-thin w-full max-w-2xl py-4 ab text-slate-300'>
                         Discover Our Exclusive Collection of Sunglasses That Combine
                         Fashion and Function
                     </p>

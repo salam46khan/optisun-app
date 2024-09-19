@@ -1,20 +1,21 @@
 import { BsInfoLg } from 'react-icons/bs';
 import aboutPic from '../../assets/img/about-removebg-preview.png'
+import Choose from '../Choose/Choose';
 const About = () => {
     return (
-        <div className=" bg-[#222222] px-2 pt-10" id="about">
-            <div className="container flex flex-col md:flex-row-reverse justify-center items-center h-full">
+        <div className=" bg-[#222222] pt-10" id="about">
+            <div className="container flex flex-col md:flex-row-reverse justify-center items-center h-full px-2">
 
                 <div className="w-full md:w-1/2 py-4">
                     <div className='flex items-center gap-5'>
                         <div className='title-box '>
-                            <BsInfoLg className='icon' />
+                            <BsInfoLg className='icon font-extrabold' />
                         </div>
                         <p className='text-pinkColor text-xl pt-1 font-mySubTitle tracking-[10px]'>ABOUT</p>
                     </div>
-                    <h2 className='md:text-6xl text-4xl font-myTitle font-bold text-slate-100 py-5'>
-                        Our Vision, Your
-                        Style
+                    <h2 className=' text-4xl font-myTitle font-bold text-slate-100 py-5'>
+                        
+                        The Perfect Blend of Style, Quality, and Protection
                     </h2>
                     <p className='text-slate-300 text-xl font-thin'>
                         At OptiSun, we believe that sunglasses are more
@@ -30,6 +31,8 @@ const About = () => {
                     <img className='w-full' src={aboutPic} alt="" />
                 </div>
             </div>
+
+            <Choose></Choose>
         </div>
     );
 };
