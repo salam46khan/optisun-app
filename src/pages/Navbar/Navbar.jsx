@@ -141,10 +141,11 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
+                                activeClass="active"
                                 to={"faq"}
                                 spy={true}
                                 smooth={true}
-                                offset={50}
+                                offset={-100}
                                 duration={500}
                             >
                                 FAQ
@@ -152,10 +153,11 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
+                                activeClass="active"
                                 to={"contact"}
                                 spy={true}
                                 smooth={true}
-                                offset={50}
+                                offset={-100}
                                 duration={500}
                             >
                                 Contact

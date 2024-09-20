@@ -26,7 +26,7 @@ const Hero = () => {
         // gsap.from(".herContent .ab")
     })
     return (
-        <div className="myHero p-2" id='hero'>
+        <div className="myHero p-2 py-10 md:py-16" id='hero'>
             <div className="container h-full flex flex-col md:flex-row justify-center md:justify-start items-center text-white ">
                 <div className='w-full md:w-1/2 heroContent'>
                     <h1 className='font-myTitle text-5xl md:text-7xl font-extrabold ab'>

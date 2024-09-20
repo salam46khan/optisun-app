@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "What types of sunglasses do you offer?",
+        "text": "We offer a wide variety of sunglasses, including classic, sporty, vintage, polarized, and eco-friendly styles."
+    },
+    {
+        "id": 2,
+        "title": "Do your sunglasses offer UV protection?",
+        "text": "Yes, all our sunglasses come with 100% UV protection to keep your eyes safe from harmful UVA and UVB rays."
+    },
+    {
+        "id": 3,
+        "title": "What is your return policy?",
+        "text": "We offer a 30-day money-back guarantee. If you’re not satisfied with your purchase, simply return the sunglasses within 30 days for a full refund or exchange."
+    },
+    {
+        "id": 4,
+        "title": "Do you offer international shipping?",
+        "text": "Yes, we ship worldwide! Shipping times and costs vary by location."
+    },
+    {
+        "id": 5,
+        "title": "How do I care for my sunglasses?",
+        "text": "We recommend cleaning your sunglasses with a microfiber cloth and storing them in the provided case when not in use."
+    }
+]

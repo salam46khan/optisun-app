@@ -20,3 +20,9 @@
         inset -1px -1px 3px #000000bb;
     backdrop-filter: blur(10px);
 }
+.slick-arrow::before{
+    color: #286969;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+}

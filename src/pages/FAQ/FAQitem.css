@@ -1,0 +1,34 @@
+.faqItem {
+    border-radius: 12px;
+    box-shadow: 3px 3px 5px #000000bb,
+        inset 3px 3px 3px #4d4d4da6,
+        -1px -1px 3px #4d4d4da6,
+        inset -1px -1px 3px #000000bb;
+    backdrop-filter: blur(10px);
+}
+
+.faqBtn {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000000bb,
+        inset 3px 3px 3px #4d4d4da6,
+        -1px -1px 3px #4d4d4da6,
+        inset -1px -1px 3px #000000bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e51679;
+}
+
+.faqBtn .inner {
+    height: 30px;
+    width: 30px;
+    padding: 4px;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 4px #000000bb,
+        1px 1px 3px #4d4d4da6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

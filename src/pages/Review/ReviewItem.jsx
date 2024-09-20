@@ -5,7 +5,7 @@ import './ReviewItem.css'
 const ReviewItem = ({review}) => {
     return (
         <div className='flex flex-col sm:flex-row-reverse items-stretch p-3 reviewItem relative'>
-            <div className='w-full md:w-1/3 reviewImg relative sm:right-4'>
+            <div className='w-1/2 mx-auto top-3 md:top-0 md:w-1/3 reviewImg relative sm:right-4'>
                 <img className='' src={review.image} alt="" />
             </div>
             <div className='w-full md:w-2/3  flex items-center reviewContent'>

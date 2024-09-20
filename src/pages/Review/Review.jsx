@@ -41,7 +41,7 @@ const Review = () => {
                 </div>
 
                 <div className='text-white px-5 '>
-                    <div className='w-full max-w-3xl mx-auto pt-10'>
+                    <div className='w-full max-w-4xl mx-auto pt-10'>
                         <Slider {...settings}>
                             {
                                 review.map(review => <ReviewItem

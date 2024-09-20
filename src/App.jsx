@@ -3,6 +3,7 @@ import Hero from "./pages/Hero/Hero";
 import Navbar from "./pages/Navbar/Navbar";
 import Headroom from "react-headroom";
 import Review from "./pages/Review/Review";
+import FAQ from "./pages/FAQ/FAQ";
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       <Hero></Hero>
       <About></About>
       <Review></Review>
+      <FAQ></FAQ>
+      
     </div>
   );
 };
