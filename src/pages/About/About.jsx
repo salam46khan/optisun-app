@@ -1,6 +1,9 @@
 import { BsInfoLg } from 'react-icons/bs';
 import aboutPic from '../../assets/img/about-removebg-preview.png'
 import Choose from '../Choose/Choose';
+import './About.css'
+import { Link } from 'react-scroll';
+import { FaArrowRight } from 'react-icons/fa';
 const About = () => {
     return (
         <div className=" bg-[#222222] md:pt-10 pt-5" id="about">
@@ -14,7 +17,7 @@ const About = () => {
                         <p className='text-pinkColor text-xl pt-1 font-mySubTitle tracking-[10px]'>ABOUT</p>
                     </div>
                     <h2 className=' text-4xl font-myTitle font-bold text-slate-100 py-5'>
-                        
+
                         The Perfect Blend of Style, Quality, and Protection
                     </h2>
                     <p className='text-slate-300 text-xl font-thin'>
@@ -26,9 +29,19 @@ const About = () => {
                         elevating your outfit, our collection has something for every
                         occasion and personality.
                     </p>
+                    <div className="flex justify-start mt-6">
+                        <Link to='review'>
+                            <button className='myBtn '>
+                                See Review
+                                <div className="icon">
+                                    <FaArrowRight className='i' />
+                                </div>
+                            </button>
+                        </Link>
+                    </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                    <img className='w-full' src={aboutPic} alt="" />
+                    <img className='w-full aboutPic' src={aboutPic} alt="" />
                 </div>
             </div>
 

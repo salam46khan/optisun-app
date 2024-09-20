@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import FAQitem from './FAQitem';
-import think from '../../assets/img/think.png'
+import think from '../../assets/img/abc.png'
 import { BsQuestionLg } from 'react-icons/bs';
+import './FAQitem.css'
 
 const FAQ = () => {
     const [faq, setFaq] = useState([])
@@ -11,7 +12,7 @@ const FAQ = () => {
             .then(data => setFaq(data))
     }, [])
     return (
-        <div className=' pt-14 px-2' id='faq'>
+        <div className=' pt-14 px-2 overflow-hidden' id='faq'>
             <div className="container flex flex-col md:flex-row items-stretch">
                 <div className='w-full md:w-1/2 flex items-start flex-col justify-center p-2'>
 
@@ -33,7 +34,7 @@ const FAQ = () => {
                     </div>
                 </div>
                 <div className='w-full md:w-1/2 flex items-end'>
-                    <img className='w-full' src={think} alt="" />
+                    <img className='w-full thinkPic' src={think} alt="" />
                 </div>
             </div>
         </div>

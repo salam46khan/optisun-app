@@ -109,7 +109,7 @@ const Navbar = () => {
                                 to={"hero"}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={0}
                                 duration={500}
                             >
                                 Home
@@ -121,7 +121,7 @@ const Navbar = () => {
                                 to={"about"}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={0}
                                 duration={500}
                             >
                                 About
@@ -133,7 +133,7 @@ const Navbar = () => {
                                 to={"review"}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={0}
                                 duration={500}
                             >
                                 Review
@@ -145,7 +145,7 @@ const Navbar = () => {
                                 to={"faq"}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={0}
                                 duration={500}
                             >
                                 FAQ
@@ -157,7 +157,7 @@ const Navbar = () => {
                                 to={"contact"}
                                 spy={true}
                                 smooth={true}
-                                offset={-100}
+                                offset={0}
                                 duration={500}
                             >
                                 Contact

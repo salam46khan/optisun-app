@@ -4,6 +4,8 @@ import Navbar from "./pages/Navbar/Navbar";
 import Headroom from "react-headroom";
 import Review from "./pages/Review/Review";
 import FAQ from "./pages/FAQ/FAQ";
+import Contact from "./pages/Contact/Contact";
+import Footer from "./pages/Footer/Footer";
 
 const App = () => {
   return (
@@ -15,7 +17,8 @@ const App = () => {
       <About></About>
       <Review></Review>
       <FAQ></FAQ>
-      
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 };
