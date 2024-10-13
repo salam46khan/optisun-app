@@ -1,11 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaRegComments } from 'react-icons/fa';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ReviewItem from './ReviewItem';
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const Review = () => {
+    const reviewContainer = useRef()
     const [review, setReview] = useState([])
 
     useEffect(() => {
@@ -13,6 +20,9 @@ const Review = () => {
             .then(res => res.json())
             .then(data => setReview(data))
     }, [])
+
+
+
 
     const settings = {
         dots: true,
@@ -24,10 +34,40 @@ const Review = () => {
         speed: 1000,
         autoplaySpeed: 5000,
     };
+
+
+    useGSAP(() => {
+        gsap.from('.review-con', {
+            y: -100,
+            scale: 2,
+            duration: 0.6,
+            stagger: 0.2,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.review-con',
+                start: 'top 90%',
+                end: 'top 50%',
+                scrub: 2,
+            },
+        }, { scope: reviewContainer })
+        gsap.from('.user-review', {
+            y: -100,
+            scale: 0.4,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.user-review',
+                start: 'top 90%',
+                end: 'top 70%',
+                scrub: 2,
+            },
+        }, { scope: reviewContainer })
+    })
+
     return (
-        <div className='py-10 md:pt-16 px-2' id='review'>
+        <div className='py-10 md:pt-20 px-2 overflow-hidden' id='review' ref={reviewContainer}>
             <div className="container">
-                <div className='text-center'>
+                <div className='text-center review-con'>
                     <div className='flex items-center gap-5 justify-center'>
                         <div className='title-box '>
                             <FaRegComments className='icon font-extrabold' />
@@ -41,7 +81,7 @@ const Review = () => {
                 </div>
 
                 <div className='text-white px-5 '>
-                    <div className='w-full max-w-4xl mx-auto pt-10'>
+                    <div className='w-full user-review  max-w-4xl mx-auto pt-10'>
                         <Slider {...settings}>
                             {
                                 review.map(review => <ReviewItem

@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 import './FAQitem.css'
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const FAQitem = ({ text, title }) => {
     const [accordionOpen, setAccordionOpen] = useState(false);
+
     return (
         <div>
-            <div className=" my-3 faqItem">
+            <div className=" my-3 faqItem ">
 
                 <button onClick={() => setAccordionOpen(!accordionOpen)} className="w-full flex justify-between items-center p-3 md:p-6 md:px-10">
                     <p className="text-2xl text-tealColor font-semibold font-mySubTitle text-start">{title}</p>

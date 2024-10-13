@@ -7,11 +7,51 @@ import { FaShippingFast, FaSuperpowers } from "react-icons/fa";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import { PiSunglassesBold } from "react-icons/pi";
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import { useEffect, useRef } from "react";
+import LocomotiveScroll from "locomotive-scroll";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const Choose = () => {
+    const choose = useRef()
+    useGSAP(() => {
+        gsap.from('.chooseCard', {
+            y: 100,
+            scale: 0.8,
+            duration: 0.6,
+            stagger: 0.2,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.chooseCard',
+                start: 'top 90%',
+                end: 'top 50%',
+                scrub: 2,
+                stagger: 0.1
+            },
+        }, { scope: choose })
+            gsap.from('.choose-content', {
+                y: -100,
+                scale: 2,
+                duration: 0.6,
+                stagger: 0.2,
+                opacity: 0,
+                scrollTrigger: {
+                    trigger: '.choose-content',
+                    start: 'top 90%',
+                    end: 'top 50%',
+                    scrub: 2,
+                    stagger: 0.1
+                },
+            }, {scope: choose})
+    })
+
     return (
-        <div className="choose pb-10 pt-12 md:pt-16 px-2">
+        <div className="choose py-24" ref={choose}>
             <div className="container">
-                <div className="text-center">
+                <div className="text-center choose-content" >
                     <div className='flex items-center gap-5 justify-center'>
                         <div className='title-box '>
                             <BsQuestionLg className='icon font-extrabold' />
@@ -24,8 +64,8 @@ const Choose = () => {
                     </h2>
                 </div>
 
-                <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-                    <div className="p-6 rounded-lg bg-opacity-25 text-center chooseCard">
+                <div className="pt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-6 chooseCard-container">
+                    <div className="p-6 rounded-lg bg-opacity-25 text-center chooseCard" data-scroll-container>
                         <div className="card-icon mx-auto">
                             <div className="inner">
                                 <MdOutlineWorkspacePremium />

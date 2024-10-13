@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Contact.css'
 import { LuContact2 } from 'react-icons/lu';
 import { FaArrowRight } from 'react-icons/fa';
@@ -6,11 +6,60 @@ import { IoLocationOutline, IoTimeOutline } from 'react-icons/io5';
 import { MdSupportAgent } from 'react-icons/md';
 import { CiMail } from 'react-icons/ci';
 
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 const Contact = () => {
+    const contact = useRef(null)
+
+    useGSAP(() => {
+
+        gsap.from('.contact-con', {
+            y: -100,
+            scale: 2,
+            duration: 1,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.contact-con',
+                start: 'top 90%',
+                end: 'top 60%',
+                scrub: 2,
+            },
+        }, {scope: contact}),
+            gsap.from('.contact-cards .contact-card', {
+                scale: 0,
+                opacity: 0,
+                stagger: 0.6,
+                duration: 1,
+                x: -100,
+                scrollTrigger: {
+                    trigger: '.contact-card',
+                    start: 'top 90%',
+                    end: 'top: 60%',
+                    scrub: 2,
+                }
+            }, {scope: contact}),
+            gsap.from('.form-content', {
+                x: 100,
+                opacity: 0,
+                duration: 2,
+                scrollTrigger: {
+                    trigger: ".form-content",
+                    start: 'top 90%',
+                    end: 'top 60%',
+                    scrub: 2,
+                }
+            }, {scope: contact})
+    })
+
+
     return (
-        <div className='contact py-16 px-2' id='contact'>
+        <div className='contact py-16 md:py-20 px-2 overflow-hidden' id='contact' ref={contact}>
             <div className="container">
-                <div className='text-center'>
+                <div className='text-center contact-con'>
                     <div className='flex items-center gap-5 justify-center'>
                         <div className='title-box '>
                             <LuContact2 className='icon font-extrabold' />
@@ -25,7 +74,7 @@ const Contact = () => {
                 <div className='flex flex-col md:flex-row mt-10 justify-center items-center gap-5 md:gap-10 w-full max-w-5xl mx-auto'>
 
                     <div className='w-full md:w-1/2'>
-                        <div>
+                        <div className='form-content'>
                             <form className="formBody">
                                 <div className="form-control py-3">
                                     <label className="label">
@@ -59,11 +108,11 @@ const Contact = () => {
                     </div>
 
                     <div className='w-full md:w-1/2'>
-                        <div className='grid grid-cols-2 gap-5'>
-                            <div className=' text-center contact-card'>
+                        <div className='grid grid-cols-2 gap-5 contact-cards'>
+                            <div className=' text-center contact-card '>
                                 <div className='contacatItem mx-auto mb-4'>
                                     <div className='inner'>
-                                        <IoTimeOutline className=''/>
+                                        <IoTimeOutline className='' />
                                     </div>
                                 </div>
                                 <h4 className='text-2xl font-bold text-tealColor'>
@@ -125,9 +174,9 @@ const Contact = () => {
                                 </p>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                 </div>
             </div>

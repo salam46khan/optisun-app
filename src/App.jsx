@@ -7,9 +7,14 @@ import FAQ from "./pages/FAQ/FAQ";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./pages/Footer/Footer";
 
+import LocomotiveScroll from 'locomotive-scroll';
+
+const locomotiveScroll = new LocomotiveScroll();
+
+
 const App = () => {
   return (
-    <div className="bg-[#222222] overflow-x-hidden">
+    <div className="bg-[#222222] overflow-hidden" data-scroll-container data-scroll data-scroll-speed="2">
       <Headroom>
         <Navbar></Navbar>
       </Headroom>

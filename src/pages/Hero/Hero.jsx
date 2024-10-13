@@ -1,12 +1,13 @@
 import { FaArrowRight } from 'react-icons/fa';
 import './Hero.css'
 import heroPic from '../../assets/img/hero.png'
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from "gsap";
+import LocomotiveScroll from 'locomotive-scroll';
 
 const Hero = () => {
-    // const heroItem = useRef();
+    
 
     useGSAP(() => {
         gsap.timeline()
@@ -14,19 +15,19 @@ const Hero = () => {
                 x: -100,
                 duration: 1,
                 opacity: 0,
-                delay: 1.4,
+                delay: 0.5,
                 stagger:0.2
             })
             .from(".heroImg", {
                 scale: 0.7,
                 duration: 0.5,
                 opacity: 0,
-            },)
+            })
 
-        // gsap.from(".herContent .ab")
+        
     })
     return (
-        <div className="myHero p-2 py-10 md:py-16" id='hero'>
+        <div className="myHero p-2 py-10 overflow-hidden md:py-16" id='hero'>
             <div className="container h-full flex flex-col md:flex-row justify-center md:justify-start items-center text-white ">
                 <div className='w-full md:w-1/2 heroContent'>
                     <h1 className='font-myTitle text-5xl md:text-7xl font-extrabold ab'>
